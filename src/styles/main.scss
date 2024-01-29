@@ -1,0 +1,64 @@
+/**
+ * Prashant Shrestha
+ * Copyright (c) 2024
+ * Date: 2024-01-28
+ */
+
+$color_darkbg: #30343b;
+$color_white: #ffffff;
+
+@mixin breakpoint($class) {
+    @if $class == xs {
+        @media (max-width: 767px) {
+            @content;
+        }
+    } @else if $class == sm {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } @else if $class == md {
+        @media (min-width: 992px) {
+            @content;
+        }
+    } @else if $class == lg {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    .main {
+        // border: 1px solid red;
+		height: 100vh;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: $color_darkbg;
+
+        .main-wrapper {
+            // border: 1px solid blue;
+
+			@include breakpoint(xs) {
+				min-width: 400px;
+				padding: 10px;
+			}
+        }
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
