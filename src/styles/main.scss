@@ -39,7 +39,7 @@ body {
 
     .main {
         // border: 1px solid red;
-		height: 100vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         align-content: center;
@@ -49,10 +49,10 @@ body {
         .main-wrapper {
             // border: 1px solid blue;
 
-			@include breakpoint(xs) {
-				min-width: 400px;
-				padding: 10px;
-			}
+            @include breakpoint(xs) {
+                min-width: 400px;
+                padding: 10px;
+            }
         }
     }
 }
@@ -61,4 +61,3 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
-
