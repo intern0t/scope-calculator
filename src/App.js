@@ -283,8 +283,8 @@ const Playground = () => {
 
     return (
         <Section
-            title={'Knowledgebase'}
-            subtitle={'Learn how the above calculations are done!'}
+            title={'Playground'}
+            subtitle={'Check 1 MOA spread per 100 yard increments!'}
             icon="info-sign"
             elevation={2}
             collapsible={true}
