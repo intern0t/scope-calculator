@@ -36,9 +36,9 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
 
     .main {
-        // border: 1px solid red;
         height: 100vh;
         display: flex;
         align-items: center;
@@ -47,17 +47,31 @@ body {
         background-color: $color_darkbg;
 
         .main-wrapper {
-            // border: 1px solid blue;
+            min-width: 450px;
 
             @include breakpoint(xs) {
-                min-width: 400px;
-                padding: 10px;
+                width: 100%;
+                padding: 30px;
             }
         }
+    }
+}
+
+.bp5-control-group {
+    @include breakpoint(xs) {
+        flex-direction: column;
     }
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+}
+
+input,
+select,
+textarea {
+    @include breakpoint(xs) {
+        font-size: 16px !important;
+    }
 }
